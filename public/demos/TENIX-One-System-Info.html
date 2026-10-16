@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TENIX One — ข้อมูลโครงการ</title>
+<meta name="description" content="แพลตฟอร์ม Security Operations แบบรวมศูนย์ สำหรับเฝ้าระวังภัยคุกคามและดูแลโครงสร้างพื้นฐานของหลายองค์กร">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b1a33'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='700' text-anchor='middle' fill='%237cc4ff' font-family='Arial'%3ET%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#f3f6fb;--surface:#fff;--text:#0e1726;--text2:#4b5b73;--border:#e1e8f1;--accent:#0ea5e9;--accent2:#0284c7;--soft:#e0f2fd;--head:#f6f8fc}
+@media(prefers-color-scheme:dark){:root{--bg:#0a1120;--surface:#111b2e;--text:#eef3fa;--text2:#b3c0d3;--border:#22314a;--accent:#38bdf8;--accent2:#38bdf8;--soft:rgba(56,189,248,.14);--head:#0e1728}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 "IBM Plex Sans Thai","Noto Sans Thai","Sarabun","Garuda",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px 64px}
+header.top{display:flex;align-items:center;gap:16px;padding:20px 0;flex-wrap:wrap}
+header.top .wm{font-weight:800;font-size:20px;letter-spacing:.05em} header.top .wm i{font-style:normal;font-weight:600;color:var(--accent,#0ea5e9)} header.top .grow{flex:1}
+.btn{display:inline-block;padding:9px 18px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;text-decoration:none;font-size:15px}
+.btn.ghost{background:transparent;color:var(--accent2);border:1px solid var(--border)}
+main{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:8px 32px 32px;box-shadow:0 1px 2px rgba(14,23,38,.05),0 4px 14px rgba(14,23,38,.05)}
+h1{font-size:34px;line-height:1.25;margin:28px 0 6px} h2{font-size:23px;margin:38px 0 10px;padding-bottom:8px;border-bottom:2px solid var(--accent)} h3{font-size:18px;margin:26px 0 8px}
+p,li{color:var(--text)} p{margin:10px 0} ul,ol{padding-left:22px} li{margin:4px 0}
+hr{border:0;border-top:1px solid var(--border);margin:30px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px;display:block;overflow-x:auto}
+th,td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+th{background:var(--head);color:var(--text2);font-size:13px;white-space:nowrap}
+td:first-child{font-weight:600;white-space:nowrap}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86em;background:var(--soft);color:var(--accent2);padding:1px 6px;border-radius:6px;word-break:break-all}
+blockquote{margin:14px 0;padding:8px 16px;border-left:4px solid var(--accent);background:var(--soft);border-radius:0 8px 8px 0}
+footer{color:var(--text2);font-size:13px;text-align:center;margin-top:24px}
+@media(max-width:640px){main{padding:4px 16px 24px} h1{font-size:26px} td:first-child{white-space:normal}}
+@media print{body{background:#fff;color:#000}.btn{display:none}main{box-shadow:none;border:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><span class="wm">TENIX <i>One</i></span><span class="grow"></span><a class="btn" href="TENIX-One-Demo.html">ทดลองใช้งานเดโม</a></header>
+<main>
+<h1>TENIX One — Security Operations Platform</h1>
+<p>เอกสารแนะนำโครงการสำหรับผู้บริหารและ Hiring Manager</p>
+<hr>
+<h2>1. ชื่อและวัตถุประสงค์</h2>
+<p><strong>TENIX One</strong> คือแพลตฟอร์ม Security Operations (SOC) แบบรวมศูนย์ สำหรับทีมที่ต้องเฝ้าระวังภัยคุกคามและดูแลโครงสร้างพื้นฐานของหลายองค์กรพร้อมกัน ระบบรวมข้อมูลจากเครื่องมือด้านความปลอดภัยหลายประเภทไว้ในหน้าจอเดียว เพื่อให้นักวิเคราะห์ตรวจสอบเหตุการณ์ ตัดสินใจ และตอบสนองได้เร็วขึ้น โดยไม่ต้องสลับหลายคอนโซล</p>
+<h2>2. ภาพรวมความสามารถ</h2>
+<table>
+<thead>
+<tr>
+<th>กลุ่ม</th>
+<th>ความสามารถ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Detection &amp; Response</strong></td>
+<td>รวม alert จาก Endpoint, SaaS, Network และ Identity จัดลำดับตามความรุนแรง มอบหมายผู้รับผิดชอบ ปิดเคส และเก็บประวัติ</td>
+</tr>
+<tr>
+<td><strong>Exposure Monitoring</strong></td>
+<td>เฝ้าระวังบัญชีและรหัสผ่านที่รั่วไหล โดเมนเลียนแบบ แยกตามโฟลเดอร์ลูกค้า พร้อมรายงาน A4</td>
+</tr>
+<tr>
+<td><strong>Web &amp; Edge Security</strong></td>
+<td>ภาพรวม WAF ความปลอดภัยของแต่ละ Zone การบล็อก IP และตรวจจับการแก้ไขเนื้อหาเว็บโดยไม่ได้รับอนุญาต</td>
+</tr>
+<tr>
+<td><strong>Infrastructure Monitoring</strong></td>
+<td>สถานะเครื่องและ agent, การค้นหาอุปกรณ์ในเครือข่าย, การตรวจสอบว่าบริการยังทำงานอยู่</td>
+</tr>
+<tr>
+<td><strong>Operations Console</strong></td>
+<td>SOC Wall สำหรับห้องปฏิบัติการ แสดงเหตุการณ์สดแบบเต็มจอ</td>
+</tr>
+<tr>
+<td><strong>Management</strong></td>
+<td>หลาย Tenant, ผู้ใช้และสิทธิ์ 3 ระดับ, API token แบบอ่านอย่างเดียวสำหรับลูกค้า, ควบคุมสิทธิ์ส่วนขยายเบราว์เซอร์, audit log</td>
+</tr>
+</tbody>
+</table>
+<h2>3. ฟังก์ชันหลักและคำอธิบาย</h2>
+<table>
+<thead>
+<tr>
+<th>โมดูล</th>
+<th>คำอธิบาย</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dashboard</strong></td>
+<td>ตัวชี้วัดหลัก (alert ที่เปิดอยู่, critical, ปิดเคสต่อสัปดาห์) แนวโน้มรายวันแยกตามความรุนแรง เครื่องและ MITRE technique ที่พบบ่อย และสถานะการเชื่อมต่อกับระบบภายนอก</td>
+</tr>
+<tr>
+<td><strong>Alerts</strong></td>
+<td>ตารางที่กรอง ค้นหา และเรียงได้ ดำเนินการเป็นกลุ่ม (รับเรื่อง/ปิดเคส) ลิ้นชักรายละเอียด 4 แท็บ: รายละเอียด, ไทม์ไลน์, Raw log (JSON ต้นฉบับ), บันทึกของทีม</td>
+</tr>
+<tr>
+<td><strong>Email Monitoring</strong></td>
+<td>ภาพรวมการรั่วไหลรายเดือน บัญชีที่รั่วพร้อมสถานะเคส การเปิดเผยรหัสผ่านโดยบันทึกการเข้าถึง การแจ้งเจ้าของบัญชี บังคับเปลี่ยนรหัสผ่าน โดเมนเลียนแบบ และโฟลเดอร์ลูกค้าที่ออกรายงาน A4 ได้</td>
+</tr>
+<tr>
+<td><strong>SOC Wall</strong></td>
+<td>หน้าจอเต็มสำหรับห้อง SOC ตัวเลขสำคัญ เหตุการณ์สด และกำหนดระดับความรุนแรงต่ำสุดที่แสดง</td>
+</tr>
+<tr>
+<td><strong>Web Defacement</strong></td>
+<td>เทียบเนื้อหาหน้าเว็บกับค่าอ้างอิง (baseline) แสดงสถานะ 4 ระดับ ความแตกต่างเป็นบรรทัด และตั้ง baseline ใหม่ได้</td>
+</tr>
+<tr>
+<td><strong>Cloudflare</strong></td>
+<td>WAF Insights (คำขอ บล็อก ประเทศ เส้นทาง กฎ), ความปลอดภัยของ Zone (คะแนนและคำแนะนำ), กฎและรายการ IP ที่ถูกบล็อก</td>
+</tr>
+<tr>
+<td><strong>System Health</strong></td>
+<td>สถานะเครื่องและ agent, กราฟทรัพยากร, เทอร์มินัลแบบจำกัดคำสั่งที่บันทึกทุกการใช้งาน, อัปเกรด agent</td>
+</tr>
+<tr>
+<td><strong>Network Monitor</strong></td>
+<td>รายการอุปกรณ์ที่ค้นพบ สแกนพอร์ต แผนผังเครือข่าย และการค้นหาอุปกรณ์รอบใหม่</td>
+</tr>
+<tr>
+<td><strong>Uptime Pulse (TUP)</strong></td>
+<td>ตรวจบริการผ่าน HTTPS หรือผ่าน agent ขนาดเบา ประวัติเหตุการณ์ และการตั้งค่าการแจ้งเตือนที่แยกจากระบบ alert ความปลอดภัย</td>
+</tr>
+<tr>
+<td><strong>Dump IOC</strong></td>
+<td>นำเข้ารายการ IOC ตรวจรูปแบบ ตัดรายการซ้ำ แบ่งเป็นชุด และสร้างสคริปต์</td>
+</tr>
+<tr>
+<td><strong>Tenants</strong></td>
+<td>จัดการองค์กรลูกค้า การแจ้งเตือนต่อ Tenant การเชื่อมต่อระบบภายนอก และการแสดงบน SOC Wall</td>
+</tr>
+<tr>
+<td><strong>Users</strong></td>
+<td>ผู้ใช้ เมทริกซ์สิทธิ์ตามบทบาท คำเชิญที่จำกัดตามระดับของผู้เชิญ และการป้องกันการลบ Super Admin คนสุดท้าย</td>
+</tr>
+<tr>
+<td><strong>Proxy Hub</strong></td>
+<td>ออก token แบบอ่านอย่างเดียวผูกกับ Tenant เดียว แสดงค่า token เพียงครั้งเดียว</td>
+</tr>
+<tr>
+<td><strong>Tenix FullSnap</strong></td>
+<td>ควบคุมผู้ที่ใช้ส่วนขยายเบราว์เซอร์ ยืนยันตัวตนด้วย OTP ทางอีเมล จัดกลุ่มตามแผนก และดูอุปกรณ์ที่ล็อกอินอยู่</td>
+</tr>
+<tr>
+<td><strong>Audit log</strong></td>
+<td>บันทึกการดำเนินการสำคัญทั้งหมดพร้อมผู้ดำเนินการและเวลา</td>
+</tr>
+</tbody>
+</table>
+<h2>4. ขั้นตอนการทำงานของผู้ใช้</h2>
+<p><strong>จัดการ alert:</strong> เข้าสู่ระบบด้วยรหัสผ่านและ MFA → เปิด Dashboard ดู alert ที่ต้องดำเนินการก่อน → เปิดหน้า Alerts กรองตามความรุนแรง → เปิดรายละเอียด ตรวจ Raw log → รับเรื่องและมอบหมาย → บันทึกข้อสังเกต → ปิดเคส ทุกขั้นถูกบันทึกใน audit log</p>
+<p><strong>ตอบสนองกรณีบัญชีรั่วไหล:</strong> พบบัญชีใน Email Monitoring → เปิดรายละเอียดดูแหล่งที่พบ → เปิดเผยรหัสผ่านเมื่อจำเป็น (บันทึกการเข้าถึง) → แจ้งเจ้าของบัญชี → บังคับเปลี่ยนรหัสผ่าน → เปลี่ยนสถานะเคสเป็น &quot;แก้ไขแล้ว&quot;</p>
+<p><strong>เตรียมข้อมูลให้ลูกค้า:</strong> สร้างโฟลเดอร์ลูกค้าและกำหนดสิ่งที่เฝ้าระวัง → ตรวจสอบผลที่พบ → ออกรายงาน A4 (พิมพ์หรือบันทึกเป็น PDF)</p>
+<p><strong>เริ่มต้นใช้งานกับลูกค้าใหม่:</strong> สร้าง Tenant → ตั้งค่าการเชื่อมต่อ → เลือกระดับ alert ที่จะแจ้งเตือน → ออก API token แบบอ่านอย่างเดียวให้ระบบของลูกค้า</p>
+<h2>5. กลุ่มผู้ใช้งานและสิทธิ์</h2>
+<table>
+<thead>
+<tr>
+<th>บทบาท</th>
+<th>สิทธิ์โดยสรุป</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Super Admin</strong></td>
+<td>ทุกความสามารถ รวมถึงจัดการ Tenant ผู้ใช้ สิทธิ์ และดูข้อมูลอ่อนไหวโดยมีการบันทึก</td>
+</tr>
+<tr>
+<td><strong>Staff</strong></td>
+<td>ตรวจสอบและตอบสนองต่อ alert มอบหมายงาน ส่งออกรายงาน แต่จัดการผู้ใช้ไม่ได้</td>
+</tr>
+<tr>
+<td><strong>Intern</strong></td>
+<td>ดู Dashboard และ alert อย่างเดียว ไม่สามารถเปลี่ยนแปลงข้อมูล</td>
+</tr>
+</tbody>
+</table>
+<p>บทบาททั้งสามเรียงเป็นบันได โดยบทบาทที่สูงกว่ามีสิทธิ์ครอบคลุมบทบาทที่ต่ำกว่า สิทธิ์แบ่งเป็นความสามารถย่อย (เช่น ตอบสนอง, จัดการผู้ใช้, ดูข้อมูลอ่อนไหว) การเชิญผู้ใช้ใหม่ทำได้ถึงบทบาทเท่ากับของผู้เชิญเท่านั้น</p>
+<h2>6. เทคโนโลยีที่ใช้</h2>
+<table>
+<thead>
+<tr>
+<th>ชั้น</th>
+<th>เทคโนโลยี</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frontend</td>
+<td>Next.js 14, React 18, TypeScript, Tailwind CSS, Zustand, Recharts / ECharts</td>
+</tr>
+<tr>
+<td>Backend</td>
+<td>Node.js, Express, TypeScript</td>
+</tr>
+<tr>
+<td>ฐานข้อมูล</td>
+<td>PostgreSQL (ข้อมูลธุรกรรม), ClickHouse (log ปริมาณมาก)</td>
+</tr>
+<tr>
+<td>ความปลอดภัยของ API</td>
+<td>JWT, bcrypt, Helmet, validation middleware, audit logger</td>
+</tr>
+<tr>
+<td>การเชื่อมต่อ</td>
+<td>CrowdStrike Falcon API, Cloudflare API, Microsoft Graph, TP-Link Omada, LINE</td>
+</tr>
+<tr>
+<td>การติดตั้งใช้งาน</td>
+<td>nginx (reverse proxy), pm2, Cloudflare</td>
+</tr>
+</tbody>
+</table>
+<h2>7. แนวทางการออกแบบสถาปัตยกรรม</h2>
+<ul>
+<li><strong>แยกหน้าที่ของข้อมูล:</strong> ข้อมูลที่ต้องถูกต้องและมีความสัมพันธ์ (ผู้ใช้ Tenant การตั้งค่า) อยู่ใน PostgreSQL ส่วน log ปริมาณมากอยู่ใน ClickHouse</li>
+<li><strong>ตรวจสิทธิ์ที่ฝั่ง API เสมอ:</strong> การซ่อนปุ่มในหน้าเว็บไม่ใช่มาตรการป้องกัน ทุกเส้นทางที่เปลี่ยนแปลงข้อมูลผ่านการตรวจสิทธิ์ตามความสามารถของบทบาท</li>
+<li><strong>แยกข้อมูลตาม Tenant</strong> และแยก token ของลูกค้าเป็นแบบอ่านอย่างเดียวผูกกับ Tenant เดียว</li>
+<li><strong>หลักการข้อมูลอ่อนไหว:</strong> รหัสผ่านที่รั่วไหลไม่ถูกเก็บในฐานข้อมูล การเปิดเผยทุกครั้งถูกบันทึก secret ของการเชื่อมต่อเก็บแบบเข้ารหัสฝั่งเซิร์ฟเวอร์</li>
+<li><strong>ระบบย่อยที่มีขอบเขตของตัวเอง</strong> เช่น การแจ้งเตือนการหยุดทำงานของบริการแยกจากการแจ้งเตือน alert ความปลอดภัย เพื่อไม่ให้ตั้งค่าปนกัน</li>
+</ul>
+<h2>8. ประโยชน์ของระบบและปัญหาที่ออกแบบมาเพื่อแก้ไข</h2>
+<table>
+<thead>
+<tr>
+<th>ปัญหา</th>
+<th>สิ่งที่ระบบช่วย</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>เครื่องมือกระจัดกระจาย ทีมต้องสลับหลายคอนโซล</td>
+<td>รวม alert, การรั่วไหล, WAF และสถานะระบบไว้ในที่เดียว</td>
+</tr>
+<tr>
+<td>ดูแลหลายองค์กร ข้อมูลและสิทธิ์ปนกัน</td>
+<td>แยก Tenant ชัดเจน กำหนดสิทธิ์ตามบทบาท และบันทึกการใช้งาน</td>
+</tr>
+<tr>
+<td>ลูกค้าต้องการข้อมูลของตนเองโดยไม่เข้าถึงข้อมูลอื่น</td>
+<td>API token แบบอ่านอย่างเดียวผูกกับ Tenant และรายงานแยกตามลูกค้า</td>
+</tr>
+<tr>
+<td>ใช้เวลาตรวจสอบเหตุการณ์นาน</td>
+<td>จัดลำดับตามความรุนแรง ลิ้นชักรายละเอียดพร้อม Raw log และไทม์ไลน์</td>
+</tr>
+<tr>
+<td>ข้อมูลอ่อนไหวถูกเปิดดูโดยไม่มีหลักฐาน</td>
+<td>การเปิดเผยแต่ละครั้งบันทึกใน audit log</td>
+</tr>
+</tbody>
+</table>
+<h2>9. บทบาทและความรับผิดชอบของผู้พัฒนา</h2>
+<p>ผู้พัฒนาดูแลระบบแบบ Full-stack ตลอดวงจรงาน ได้แก่</p>
+<ul>
+<li>ออกแบบและพัฒนาส่วนติดต่อผู้ใช้ (Next.js / TypeScript) รวมถึงการรองรับหลายขนาดจอและธีมสว่าง/มืด</li>
+<li>พัฒนา API และตรรกะธุรกิจ (Express / TypeScript) พร้อมระบบสิทธิ์ตามบทบาทและการบันทึกการใช้งาน</li>
+<li>ออกแบบโครงสร้างฐานข้อมูลและเลือกที่เก็บข้อมูลให้เหมาะกับลักษณะข้อมูล</li>
+<li>เชื่อมต่อกับระบบภายนอกด้านความปลอดภัย (endpoint, edge, อีเมล, เครือข่าย)</li>
+<li>ติดตั้งใช้งานและดูแลระบบบนเซิร์ฟเวอร์ รวมถึงการตั้งค่า reverse proxy และการเฝ้าสังเกตการทำงาน</li>
+</ul>
+<p><strong>ขนาดของโครงการ:</strong> โค้ด TypeScript ประมาณ 66,000 บรรทัด ประวัติการพัฒนา 57 commits ระหว่างวันที่ 9 มิถุนายน – 15 ตุลาคม 2026</p>
+<hr>
+<h2>ภาคผนวก: ความสามารถในระบบจริง และ Demo Capabilities</h2>
+<p>เดโมที่แนบมาจำลองหน้าตาและการทำงานของระบบเพื่อให้ทดลองใช้ได้ <strong>ข้อมูลทั้งหมดในเดโมเป็นข้อมูลสมมติ</strong> ไม่เชื่อมต่อกับระบบหรือข้อมูลจริง ตารางนี้แยกให้ชัดว่าอะไรคือความสามารถที่มีในระบบจริงซึ่งตรวจสอบได้จากซอร์สโค้ด และอะไรคือสิ่งที่เดโมจำลองขึ้น</p>
+<h3>ก. ความสามารถที่ยืนยันได้ในระบบจริง (ตรวจสอบได้จากซอร์สโค้ดในรีโพซิทอรี)</h3>
+<table>
+<thead>
+<tr>
+<th>ความสามารถ</th>
+<th>โมดูลในซอร์สโค้ด</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>รวมและจัดการ alert (Endpoint, SaaS)</td>
+<td><code>backend/src/services/crowdstrike.service.ts</code>, <code>cortex-xdr.service.ts</code>, <code>saas-security.service.ts</code>, <code>alert-action.ts</code> · หน้า <code>app/(main)/alerts</code></td>
+</tr>
+<tr>
+<td>Dashboard และการสรุปข้อมูล</td>
+<td><code>dashboard.service.ts</code> · <code>app/(main)/dashboard</code></td>
+</tr>
+<tr>
+<td>เฝ้าระวังบัญชีรั่วไหล, การเปิดเผยรหัสผ่านโดยบันทึก, M365</td>
+<td><code>recon.service.ts</code>, <code>m365.service.ts</code> · <code>app/(main)/email-monitoring</code></td>
+</tr>
+<tr>
+<td>SOC Wall และสตรีมเหตุการณ์สด</td>
+<td><code>wall.service.ts</code>, <code>wall-settings.service.ts</code>, <code>event-stream.service.ts</code></td>
+</tr>
+<tr>
+<td>ตรวจจับการแก้ไขเนื้อหาเว็บ</td>
+<td><code>defacement.service.ts</code> · <code>app/(main)/web-defacement</code></td>
+</tr>
+<tr>
+<td>Cloudflare WAF</td>
+<td><code>cloudflare.service.ts</code> · <code>app/(main)/waf-insights</code></td>
+</tr>
+<tr>
+<td>System Health, เทอร์มินัล, SNMP/BMC</td>
+<td><code>bewzab.service.ts</code>, <code>bewzab-terminal.service.ts</code>, <code>bewzab-snmp.service.ts</code>, <code>bewzab-bmc.service.ts</code> · <code>app/(main)/bewzab</code></td>
+</tr>
+<tr>
+<td>ค้นหาอุปกรณ์ในเครือข่าย, Omada</td>
+<td><code>asset-discovery.service.ts</code>, <code>omada.service.ts</code>, <code>oui.service.ts</code> · <code>app/(main)/network-monitor</code></td>
+</tr>
+<tr>
+<td>Uptime Pulse (TUP)</td>
+<td><code>tup.service.ts</code> · <code>app/(main)/tup</code></td>
+</tr>
+<tr>
+<td>Tenants และ API token ต่อ Tenant</td>
+<td><code>tenant.service.ts</code>, <code>tenant-proxy.service.ts</code> · <code>app/(main)/tenants</code>, <code>app/(main)/proxy-hub</code></td>
+</tr>
+<tr>
+<td>ผู้ใช้ และสิทธิ์ตามบทบาท (SUPER_ADMIN / STAFF / INTERN)</td>
+<td><code>backend/src/middleware/auth.ts</code> (ตัวป้องกันสิทธิ์ใช้ใน 140 จุดของเส้นทาง API) · <code>app/(main)/users</code></td>
+</tr>
+<tr>
+<td>ยืนยันตัวตนสองขั้นตอน (2FA) ตอนเข้าสู่ระบบ</td>
+<td><code>app/api/auth/login/route.ts</code></td>
+</tr>
+<tr>
+<td>นำเข้ารายการ IOC</td>
+<td><code>app/(main)/dump-ioc</code></td>
+</tr>
+<tr>
+<td>ควบคุมสิทธิ์ส่วนขยายเบราว์เซอร์ด้วย OTP อีเมล</td>
+<td><code>fullsnap.service.ts</code>, <code>fullsnap-mail.ts</code> · <code>app/(main)/fullsnap</code></td>
+</tr>
+<tr>
+<td>Audit log และการตรวจสอบข้อมูลนำเข้า</td>
+<td><code>backend/src/middleware/auditLogger.ts</code>, <code>validation.ts</code> · ตาราง <code>audit_logs</code></td>
+</tr>
+<tr>
+<td>ความสามารถที่ <strong>ไม่ได้แสดงในเดโม</strong></td>
+<td>ระบบป้องกันเครื่อง (Guard), การค้นหา NG-SIEM, การรับ log เข้า ClickHouse, การแจ้งเตือนผ่าน LINE</td>
+</tr>
+</tbody>
+</table>
+<h3>ข. Demo Capabilities (จำลองขึ้นเพื่อการสาธิต ไม่ใช่ความสามารถของระบบจริง)</h3>
+<table>
+<thead>
+<tr>
+<th>Demo Capability</th>
+<th>ลักษณะที่จำลอง</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ข้อมูลทั้งหมด</td>
+<td>สร้างขึ้นจากข้อมูลสมมติ: alert 640 รายการ, 6 Tenant, 22 เครื่อง, 54 อุปกรณ์เครือข่าย ฯลฯ ไม่ตรงกับข้อมูลจริงใดๆ</td>
+</tr>
+<tr>
+<td>เครื่องมือยืนยันตัวตนสองขั้นตอนบนหน้า Login</td>
+<td>แสดงรหัส TOTP ให้ในหน้าเดียวกันเพื่อให้ผู้ชมเข้าสู่ระบบได้โดยไม่ต้องใช้มือถือ (การคำนวณรหัสเป็นไปตามมาตรฐาน RFC 6238)</td>
+</tr>
+<tr>
+<td>สตรีมเหตุการณ์สดบน SOC Wall</td>
+<td>ตัวสร้างเหตุการณ์จำลองทุก 3–7 วินาที</td>
+</tr>
+<tr>
+<td>เทอร์มินัล, การสแกนพอร์ต, การค้นหาอุปกรณ์, การอัปเกรด agent</td>
+<td>จำลองผลลัพธ์และความคืบหน้า ไม่ได้ติดต่อเครื่องจริง</td>
+</tr>
+<tr>
+<td>การเชื่อมต่อกับระบบภายนอก (ทดสอบการเชื่อมต่อ, แจ้งเจ้าของบัญชี, บังคับเปลี่ยนรหัสผ่าน)</td>
+<td>จำลองการเรียกและผลตอบกลับ</td>
+</tr>
+<tr>
+<td>การดูระบบในฐานะบทบาทต่างๆ และเมทริกซ์สิทธิ์ 10 รายการ</td>
+<td>ตัวเลือกและตัวอย่างสำหรับสาธิตผลของสิทธิ์ ไม่ได้สะท้อนรายการสิทธิ์จริงของระบบ</td>
+</tr>
+<tr>
+<td>การบันทึกการเปลี่ยนแปลง</td>
+<td>เก็บในเบราว์เซอร์ของผู้ชมเท่านั้น และคืนค่าข้อมูลตัวอย่างได้</td>
+</tr>
+</tbody>
+</table>
+
+</main>
+<footer>ข้อมูลในเดโมทั้งหมดเป็นข้อมูลสมมติเพื่อการสาธิต</footer>
+</div>
+</body>
+</html>
