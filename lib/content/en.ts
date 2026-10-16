@@ -28,33 +28,33 @@ const en: Content = {
     },
     intro: [
       "I build the tools security teams work in.",
-      "Logs that can prove they were never touched.",
-      "Five systems, each built end to end by one person.",
+      "Log storage built to show when records have been altered.",
+      "Three platforms and two tools, built and run by one engineer.",
     ],
-    facts: ["systems built end to end", "certifications", "certification issuers", "security platforms worked with"],
+    facts: ["projects built end to end", "certifications", "certification issuers", "security platforms worked with"],
     work: {
       title: "Selected work",
       blurb:
-        "Five things I designed and built, each one on my own. Three have an interactive demo you can open and click through; they run in your browser on invented data.",
+        "Five projects from my current role. Three have an interactive demo that runs in your browser on invented data.",
       demoDetails: "Demo + details",
       details: "Details",
       helixLabel: "Selected work, visual carousel",
     },
     source: {
       label: "Source code",
-      title: ["Why the ", "GitHub", " looks empty"],
-      body: "The repositories behind this work are private, so my GitHub profile shows few or no public projects. Here is how you can still see what I built.",
+      title: ["Source ", "code", ""],
+      body: "The repositories behind this work are private, so my GitHub profile shows few public projects. These are available instead.",
       cards: [
-        { title: "Live demos", text: "Three systems open in your browser with invented data: click through the real interface, not a mock-up." },
-        { title: "Design write-ups", text: "Each project page explains the problem, the design decisions and exactly what I did, with screenshots." },
-        { title: "Code walkthrough on request", text: "I am glad to walk through the code and architecture in an interview or on a screen-share." },
+        { title: "Live demos", text: "Three systems open in your browser: the actual interface running on simulated data." },
+        { title: "Design write-ups", text: "Each project page covers the problem, the design decisions and my role, with screenshots." },
+        { title: "Code walkthrough on request", text: "Available on request: a walkthrough of the code and architecture in an interview or on a screen-share." },
       ],
       github: "My GitHub profile",
     },
     marquee: "Tools and systems I work with",
     about: {
       label: "About",
-      headline: ["Engineer first, ", "security", " always."],
+      headline: ["Engineering applied to ", "security", " operations."],
       now: "Now",
       education: "Education",
       portraitAlt: "Portrait of Panupong Nijjaboon smiling, in a navy suit and patterned tie",
@@ -62,13 +62,13 @@ const en: Content = {
     },
     experience: {
       label: "Experience",
-      headline: ["Four roles, one thread: ", "detect, respond, build.", ""],
+      headline: ["Four roles, from IT support to ", "building security software.", ""],
       current: "Current",
       builtHeading: "What I built here",
       viewProject: "Project page",
       otherHeading: "Also built",
       otherText:
-        "A command-line tool that builds an exposure report for a domain from public sources. Python, sole developer. Source is on request.",
+        "A command-line tool that builds an exposure report for a domain from public sources. Python. Source is on request.",
     },
     stack: {
       label: "Stack",
@@ -105,7 +105,7 @@ const en: Content = {
     },
     contact: {
       label: "Contact",
-      headline: ["Let’s ", "talk.", ""],
+      headline: ["Get in ", "touch.", ""],
       cv: "CV (PDF, English)",
       cvOther: "CV (PDF, Thai)",
       cvOtherHref: "/cv/Panupong-Nijjaboon-CV-TH.pdf",
@@ -133,7 +133,7 @@ const en: Content = {
   },
   profile: {
     summary:
-      "System engineer who designs and builds security software end to end, as the only developer: the interface, the API, the data stores and the servers. My systems cover security operations (TENIX One), log storage with tamper evidence (TENIX DeepSpace), project and billing tracking (Project Hub), a screenshot tool (TENIX FullSnap) and a passive reconnaissance tool (10CYBER Recon). Before that I worked in SOC monitoring, data loss prevention and IT support. I hold 18 security and red-team certifications.",
+      "System engineer who designs and builds security software end to end: the interface, the API, the data stores and the servers. My systems cover security operations (TENIX One), log storage with tamper evidence (TENIX DeepSpace), project and billing tracking (Project Hub), a screenshot tool (TENIX FullSnap) and a passive reconnaissance tool (10CYBER Recon). Before that I worked in SOC monitoring, data loss prevention and IT support. I hold 18 certifications and accreditations in security, red teaming and vendor technology.",
     education: {
       degree: "Bachelor’s degree, Computer Engineering Technology",
       school: "Rajamangala University of Technology Krungthep",
@@ -147,7 +147,7 @@ const en: Content = {
         period: "Mar 2025 – Present",
         current: true,
         intro:
-          "I design, build and run the company’s in-house security and operations software. I built each system below on my own, from the first design to deployment, so the work spans the interface, the API, the data stores and the servers.",
+          "I design, build and run the company’s in-house security and operations software. I was the sole developer on each system below, from first design to deployment, so the work spans the interface, the API, the data stores and the servers.",
         projectEntries: [
           {
             slug: "tenix-one",
@@ -155,9 +155,8 @@ const en: Content = {
             line: "Multi-tenant security operations platform",
             points: [
               "Built the interface in Next.js and TypeScript and the API in Express, with three permission levels (Super Admin, Staff, Intern), an audit log and read-only per-tenant API tokens.",
-              "Chose and modelled the data stores: PostgreSQL for users, tenants and settings; ClickHouse for high-volume logs.",
+              "Data stores: PostgreSQL for users, tenants and settings; ClickHouse for high-volume logs.",
               "Integrated CrowdStrike Falcon, Cloudflare, Microsoft Graph, TP-Link Omada and LINE. Deploy and operate it behind nginx and pm2.",
-              "About 66,000 lines of TypeScript in 57 commits, 9 June – 15 October 2026.",
             ],
           },
           {
@@ -176,10 +175,9 @@ const en: Content = {
             name: "Project Hub",
             line: "Contracts, warranty and billing tracker for a system-integrator business",
             points: [
-              "Designed the data model and REST API (Express, MongoDB, Redis) and built every screen in React and TypeScript.",
+              "Designed the data model and REST API (Express, MongoDB, Redis) and the React and TypeScript interface.",
               "Wrote the automation: a nightly expiry job, LINE summary reminders and a read-only Integration API, with tests.",
               "Handled authentication, rate limiting, hashed API keys and webhook signature checks. Deploy it on PM2 and nginx.",
-              "About 14,700 lines in the backend and 32,000 in the frontend.",
             ],
           },
           {
@@ -270,21 +268,21 @@ const en: Content = {
         "Subsystems keep their own scope: uptime alerts are configured separately from security alerts so settings never mix.",
       ],
       role: [
-        "Worked alone: no other developer. I designed and built the interface in Next.js and TypeScript, responsive with light and dark themes.",
+        "Sole developer. Designed and built the interface in Next.js and TypeScript, responsive, with light and dark themes.",
         "Built the API and business logic in Express and TypeScript, with role-based permissions and audit logging.",
         "Chose the data stores and modelled the data.",
         "Wrote the integrations with CrowdStrike Falcon, Cloudflare, Microsoft Graph, TP-Link Omada and LINE.",
         "Deploy and operate it on a server behind nginx and pm2.",
       ],
-      factLabels: ["lines of TypeScript", "commits, 9 Jun – 15 Oct 2026", "permission levels", "two-step sign-in"],
+      factLabels: ["external integrations", "permission levels", "two-step sign-in"],
     },
     "tenix-deepspace": {
       category: "Log data lake",
-      tagline: "Collect, store and search security logs, and prove the originals were never altered.",
+      tagline: "Collect, store and search security logs, and detect whether the originals have been altered.",
       summary:
         "An appliance that runs inside the customer’s own network. It receives logs from many sources, keeps the original bytes under a hash chain, and serves fast search over recent data. Nothing leaves the customer’s network.",
       problem:
-        "Organisations need logs they can search quickly and defend later. DeepSpace keeps a fast hot tier for search, a compressed cold tier for retention and an evidence vault that lets you show what was received and that it was not changed.",
+        "Organisations need logs they can search quickly and defend later. DeepSpace keeps a fast hot tier for search, a compressed cold tier for retention and an evidence vault that lets you show what was received and detect whether it was changed.",
       coverAlt: "TENIX DeepSpace pipeline view from log sources through parsing to storage",
       shotAlts: ["Pipeline diagram", "Overview dashboard with ingest rate and recent events"],
       demoLabel: "Open the interactive demo",
@@ -306,7 +304,7 @@ const en: Content = {
         "Configuration over code for integrations, and measure instead of assert for compression figures.",
       ],
       role: [
-        "Worked alone: no other developer. I designed the data path: intake, buffer, consumers and storage tiers, plus the separate evidence path.",
+        "Sole developer. Designed the data path: intake, buffer, consumers and storage tiers, plus the separate evidence path.",
         "Built the backend services and the Next.js console, including search, sources, roles, quotas and audit log.",
         "Wrote the parser design, the shape-based headline logic and the spec-driven connector engine.",
         "Designed the sign-in model (password plus authenticator or email code) and the installer, release signing and update tooling.",
@@ -345,14 +343,12 @@ const en: Content = {
         "Business rules (which projects to expire, how to build a message) are pure functions with automated tests. Demo mode is a build-time switch, so the production bundle contains no demo code.",
       ],
       role: [
-        "Worked alone: no other developer. I designed and built the data model, the REST API, per-module permissions and every screen in React and TypeScript.",
+        "Sole developer. Designed and built the data model, the REST API, per-module permissions and every screen in React and TypeScript.",
         "Wrote the automation: expiry checker, LINE summary sender and the Integration API, with tests.",
         "Handled security: authentication, rate limiting, hashed keys and webhook signature checks.",
         "Deploy and operate it on PM2 and nginx, and built the demo mode used on this page.",
       ],
       factLabels: [
-        "lines in the backend (77 TypeScript files)",
-        "lines in the frontend",
         "user roles",
         "days of activity log and recycle bin retention",
       ],
@@ -386,7 +382,7 @@ const en: Content = {
         "Access is managed centrally from the admin console instead of inside the extension.",
       ],
       role: [
-        "Worked alone: no other developer. I designed and built the extension and its capture, annotation and export tools.",
+        "Sole developer. Designed and built the extension and its capture, annotation and export tools.",
         "Built the access-control module for it inside TENIX One (email OTP, department groups, signed-in devices).",
       ],
       factLabels: ["store-listing screens", "export formats"],
@@ -415,7 +411,7 @@ const en: Content = {
         "Passive-first: most modules read public third-party data and send nothing to the target. The live endpoint prober and the TLS check do contact the target’s public services, so the tool is for domains you own or are authorised to assess.",
         "API keys come from environment variables and are kept out of the repository.",
       ],
-      role: ["Worked alone: sole developer. I designed and wrote the whole tool and its README."],
+      role: ["Sole developer. Designed and wrote the tool and its README."],
       factLabels: ["modules", "optional intelligence sources"],
     },
   },
