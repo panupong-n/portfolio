@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 import "@fontsource/instrument-serif/400.css";
 import "@fontsource/instrument-serif/400-italic.css";
 import "@fontsource-variable/inter-tight";
@@ -85,6 +86,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
         <Reveal />
         <SmoothScroll />
         <ScrollButtons labelTop={c.ui.scrollTop} labelBottom={c.ui.scrollBottom} />
+        <Analytics />
       </body>
     </html>
   );
